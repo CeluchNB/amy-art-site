@@ -12,7 +12,7 @@ module.exports = {
         'bone-text': '#3b3633'
       },
       fontFamily: {
-        'script': 'Apple Chancery, cursive',
+        'heading': 'Optima, cursive',
       }
     },
   },
