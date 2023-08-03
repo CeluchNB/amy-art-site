@@ -7,11 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'bone': '#e5d6c9',
+        'bone-text': '#3b3633'
       },
+      fontFamily: {
+        'script': 'Apple Chancery, cursive',
+      }
     },
   },
   plugins: [],
