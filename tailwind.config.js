@@ -13,6 +13,7 @@ module.exports = {
       },
       fontFamily: {
         'heading': 'Optima, cursive',
+        'quote': ['Pacifico', 'cursive']
       }
     },
   },

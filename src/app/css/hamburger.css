@@ -5,3 +5,7 @@
     background-color: #3b3633;
     margin: 0.5rem;
 }
+
+#hamburger {
+    cursor: pointer;
+}
