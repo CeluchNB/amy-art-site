@@ -5,9 +5,9 @@ import '../css/hamburger.css';
 
 const HamburgerMenu = () => {
     const [open, setOpen] = useState(false);
+    const [menuVisible, setMenuVisible] = useState(false);
 
     const handleClick = () => {
-        
         if (!open) {
             document.getElementById('one')?.classList.add('translate-y-3', 'rotate-45', 'group-active:translate-y-0', 'group-active:rotate-0')
             document.getElementById('one')?.classList.remove('translate-y-0', 'rotate-0', 'group-active:translate-y-3', 'group-active:rotate-45')
@@ -25,6 +25,11 @@ const HamburgerMenu = () => {
         }
 
         setOpen(curr => !curr);
+        if (menuVisible) {
+            setTimeout(() => setMenuVisible(false), 500)
+        } else {
+            setMenuVisible(true)
+        }
     }
 
     return (
@@ -34,7 +39,7 @@ const HamburgerMenu = () => {
                 <div id="two" className="item transition duration-150 group-active:scale-x-0" />
                 <div id="three" className="item transition duration-150 group-active:-translate-y-3 group-active:-rotate-45" />
             </div>
-            <ul className={`absolute left-0 bg-white w-48 rounded-b-md transition-opacity duration-500 group-active:opacity-100 ${open ? 'opacity-100' : 'opacity-0'}`}>
+            <ul className={`absolute left-0 bg-white w-48 rounded-b-md transition-opacity duration-500 group-active:opacity-100 ${open ? 'opacity-100 visible' : 'opacity-0'} ${!menuVisible && 'invisible'}`}>
                 <li className="p-2"><Link href="/">Home</Link></li>
                 <li className="p-2"><Link href="/gallery">Prints</Link></li>
                 <li className="p-2"><Link href="/gallery">Originals</Link></li>
